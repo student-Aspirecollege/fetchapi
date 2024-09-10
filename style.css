@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("pic.avif") no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+}
+
+.calculate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid rgb(95, 20, 145);
+    margin: 10% auto;
+    max-width: 600px; /* Added max-width to limit the width on larger screens */
+    width: 90%; /* Adjusted width to use percentage for better responsiveness */
+    background: white;
+    border-radius: 20px;
+}
+
+.score-heading { /* Fixed typo in class name */
+    color: rgb(95, 20, 145);
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 2rem; /* Adjusted font size for better readability */
+}
+
+.answer, .button {
+    width: 100%; /* Set to 100% to adjust automatically within the container */
+    max-width: 500px; /* Added max-width to ensure proper scaling */
+    margin: 20px 0; /* Simplified margin */
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(73, 72, 72);
+}
+
+.button {
+    background: rgb(84, 11, 133);
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.answer:focus-visible {
+    outline: 2px solid rgb(84, 11, 133);
+    border: 2px solid rgb(84, 11, 133);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+    .calculate {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .calculate {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .calculate {
+        width: 95%;
+    }
+    
+    p {
+        font-size: 1.5rem; /* Adjusted font size for smaller screens */
+    }
+
+    .answer, .button {
+        max-width: 100%;
+    }
+}
